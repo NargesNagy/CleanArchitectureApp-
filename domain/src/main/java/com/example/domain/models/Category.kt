@@ -1,8 +1,8 @@
 package com.example.domain.models
 
 data class Category(
-    val categoryId: String,
-    val categoryName: String,
-    val categoryDescription: String,
-    val CategoryImage: String
+    val idCategory: String,
+    val strCategory: String,
+    val strCategoryThumb: String,
+    val strCategoryDescription: String
 )

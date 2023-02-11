@@ -3,17 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="6dp"
-        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,33 +25,34 @@
                 android:id="@+id/meal_imageView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_margin="10dp"
+                android:layout_margin="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.142" />
 
             <TextView
                 android:id="@+id/meal_name_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="ggggg"
+                android:layout_marginTop="8dp"
+                android:text=""
                 android:textSize="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.153"
                 app:layout_constraintStart_toEndOf="@+id/meal_imageView"
                 app:layout_constraintTop_toTopOf="@+id/meal_imageView" />
 
+
             <TextView
-                android:id="@+id/meal_descreption_textview"
-                android:layout_width="wrap_content"
+                android:id="@+id/category_des_tv"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="hhhh"
-                android:textSize="18dp"
+                android:layout_margin="8dp"
+                android:maxLines="2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/meal_name_textview"
+                app:layout_constraintHorizontal_bias="0.031"
+                app:layout_constraintStart_toEndOf="@id/meal_imageView"
                 app:layout_constraintTop_toBottomOf="@id/meal_name_textview" />
 
 
@@ -65,7 +67,7 @@
                 app:icon="@drawable/ic_favorite"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/meal_descreption_textview" />
+                app:layout_constraintTop_toBottomOf="@+id/category_des_tv" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,18 +14,19 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MealsViewModel @Inject constructor(
-private val getMealsUseCase: GetMealsUseCase
-) : ViewModel(){
+    private val getMealsUseCase: GetMealsUseCase
+) : ViewModel() {
 
-    private val _categoryResponse : MutableStateFlow<CategoryResponse?> = MutableStateFlow(null)
-    val categoryResponse : StateFlow<CategoryResponse?> = _categoryResponse
+    private val _categoryResponse: MutableStateFlow<CategoryResponse?> = MutableStateFlow(null)
+    val categoryResponse: StateFlow<CategoryResponse?> = _categoryResponse
 
-    fun getMealsFromRemote(){
+    fun getMealsFromRemote() {
         viewModelScope.launch {
-            try{
+            try {
                 _categoryResponse.value = getMealsUseCase()
-            } catch (e : Exception){
-                Log.e("TAG ViewModel" , e.message.toString())
+                Log.d("TAG ViewModel" , "${_categoryResponse.value}")
+            } catch (e: Exception) {
+                Log.e("TAG ViewModel On Error", e.message.toString())
             }
 
         }
