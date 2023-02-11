@@ -42,7 +42,7 @@
                 app:layout_constraintTop_toTopOf="@+id/meal_imageView" />
 
             <TextView
-                android:id="@+id/meal_details_textview"
+                android:id="@+id/meal_descreption_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -65,7 +65,7 @@
                 app:icon="@drawable/ic_favorite"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/meal_details_textview" />
+                app:layout_constraintTop_toBottomOf="@+id/meal_descreption_textview" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
