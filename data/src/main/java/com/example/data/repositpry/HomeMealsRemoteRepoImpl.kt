@@ -7,5 +7,4 @@ import com.example.domain.repo.HomeRemoteRepoInterface
 class HomeMealsRemoteRepoImpl (private val apiService: ApiService) : HomeRemoteRepoInterface {
     override suspend fun getMealsFromRemote() = apiService.getMeals()
 
-
 }
